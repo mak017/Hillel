@@ -1,0 +1,77 @@
+﻿body	{
+	background: grey;
+	background: rgba(64, 64, 161, .5);
+	text-align: center;
+	font-family: 'Trebuchet MS', Tahoma, sans-serif;
+}
+h1 {
+	color: white;
+}
+.picture1,
+.picture2,
+.picture3,
+.picture4,
+.picture5,
+.picture6,
+.picture7,
+.picture8,
+.picture9,
+.picture10,
+.picture11,
+.picture12,
+.picture13,
+.picture14,
+.picture15 {
+	width: 400px;
+	height: 300px;
+	margin: 30px;
+	display: inline-block;
+	color: black;
+	font-size: 20px;
+	text-shadow: 1px 1px 2px white;
+}
+.picture1 {
+	background-image: url('http://img7.autonavigator.ru/carsfoto/400/18335/268477/Fiat_500X_SUV%205%20door_2015.jpg');
+}
+.picture2 {
+	background-image: url('http://image.priceprice.k-img.com/global/images/product/cars/Honda_HRV/Honda_HRV_L_1.jpg');
+}
+.picture3 {
+	background-image: url('http://cdn.motorpage.ru/Photos/800/17DF.jpg');
+}
+.picture4 {
+	background-image: url('http://img7.autonavigator.ru/carsfoto/400/19494/287214/Alfa%20Romeo_Giulia_Sedan_2016.jpg');
+}
+.picture5 {
+	background-image: url('http://i.quto.ru/p400x300/56ee0c92333a8.jpg');
+}
+.picture6 {
+	background-image: url('http://img7.autonavigator.ru/carsfoto/400/19355/284620/Honda_Civic%20Type%20R.jpg');
+}
+.picture7 {
+	background-image: url('http://cdn.motorpage.ru/Photos/800/16B9.jpg');
+}
+.picture8 {
+	background-image: url('http://i.quto.ru/p400x300/541aa2745aad2.png');
+}
+.picture9 {
+	background-image: url('http://img7.autonavigator.ru/carsfoto/400/20110/296268/BMW_M2.jpg');
+}
+.picture10 {
+	background-image: url('http://i.quto.ru/p400x300/55647b35c4cfa.jpeg');
+}
+.picture11 {
+	background-image: url('http://emcars.com/uimages/vehicle/1432673/med/2016-Porsche-911-GT3-RS-WP0AF2A9XGS192246-7385.jpeg');
+}
+.picture12 {
+	background-image: url('http://www.themotorreport.com.au/content/image/2/0/2015_ferrari_488_gtb_overseas_04-0731-400x300.jpg');
+}
+.picture13 {
+	background-image: url('http://cdn.motorpage.ru/Photos/800/82D1.jpg');
+}
+.picture14 {
+	background-image: url('http://img7.autonavigator.ru/carsfoto/400/2576/292231/Acura_NSX.jpg');
+}
+.picture15 {
+	background-image: url('http://i.ebayimg.com/00/s/NzUwWDEwMDA=/z/0xwAAOSw~oFXNg5u/$_1.JPG?set_id=880000500F');
+}
