@@ -21,22 +21,22 @@ var x = +prompt("Ведите целое число больше 0");
 var result;
 var num1 = 0, num2 = 1;
 
-if(x==0) {
+if (x == 0) {
   console.log(num1);
 } else if (x == 1) {
   console.log(num1);
   console.log(num2);
-} else if (x >= 0) {
+} else if (x >= 2) {
   console.log(num1);
   console.log(num2);
-  for(i = 1; i <= x; i++) {
+  for (i = 1; i <= x; i++) {
   result = num1 + num2;
   num1 = num2;
   num2 = result;
   console.log(result);
 }
 } else {
-  result ="Число меньше 0!";
+  console.log("Число меньше 0!");
 }
 
 
