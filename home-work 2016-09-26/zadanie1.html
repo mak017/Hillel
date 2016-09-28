@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/lahofesuju/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+var x = +prompt("Ведите целое число больше 0");
+var result;
+var num1 = 0, num2 = 1;
+
+if(x==0) {
+  console.log(num1);
+} else if (x == 1) {
+  console.log(num1);
+  console.log(num2);
+} else if (x >= 0) {
+  console.log(num1);
+  console.log(num2);
+  for(i = 1; i <= x; i++) {
+  result = num1 + num2;
+  num1 = num2;
+  num2 = result;
+  console.log(result);
+}
+} else {
+  result ="Число меньше 0!";
+}
+
+
+</script>
+</body>
+</html>
