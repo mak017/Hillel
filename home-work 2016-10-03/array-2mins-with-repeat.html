@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/voyenejuwu/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+var A = [76, 6, 6, 9, 40, 6, 57, 49, 89, 17];
+
+
+console.log(A);
+
+function findMin(arr) {
+  var min1 = min2 = arr[0];
+  var arrTmp = [];
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] < min1) {
+      min1 = arr[i];
+    } 
+  }
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] != min1) {
+      arrTmp.unshift(arr[i]);
+    }
+  }
+  if (arrTmp.length < arr.length-1) {
+    arrTmp.unshift(min1);
+  }
+  console.log(arrTmp);
+  for (i = 0; i < arrTmp.length; i++) {
+    if (arrTmp[i] < min2) {
+      min2 = arrTmp[i];
+    } 
+  }
+  console.log(min1 +" & "+min2);
+}
+findMin(A);
+</script>
+</body>
+</html>

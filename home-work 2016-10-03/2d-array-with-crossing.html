@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/hofuqekate/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+//var a = +prompt("Введите размер массива");
+var matrixArr;
+var p = +prompt("Введите столбец массива");
+var k = +prompt("Введите строку массива");
+
+function fillMatrixArr(rows, columns) {
+  var arr = [];
+  for (var i = 0; i < columns; i++) {
+    arr[i] = [];
+    for (var j = 0; j < rows; j++) {
+      if (i == 0 || i == columns-1 || j == 0 || j == rows-1) {
+        arr[i][j] = "*";
+      } else {
+        arr[i][j] = Math.floor(Math.random() * 100);
+      }
+    }
+  }
+  return arr;
+}
+
+matrixArr = fillMatrixArr(10, 10);
+
+function crossMatrixArr(arr, p, k) {
+  var tempArr = [];
+  var keySum = 0;
+  for (var i = 1; i < arr.length-1; i++) {
+    for (var j = 1; j < arr[i].length-1; j++) {
+      if ((i != p || j != k) && arr[i][j] != 0) {
+        tempArr[i] = arr[i][j];
+      }
+    }
+  }
+  for (var l; l < tempArr.length; l++) {
+    keySum += l;
+  }
+  console.log(keySum)
+  for (var m = 1; m < arr.length-1; m++) {
+    for (var n = 1; n < arr[m].length-1; n++) {
+      if (m == p && j == k) {
+        arr[m][n] = keySum;
+      } else if (m == p || n == k) {
+        arr[m][n] = "*";
+      } 
+    }
+  }
+}
+crossMatrixArr(matrixArr, p, k)
+console.log(matrixArr);
+document.write(matrixArr);
+</script>
+</body>
+</html>
