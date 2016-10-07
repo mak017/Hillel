@@ -17,11 +17,9 @@ Released under the MIT license: http://jsbin.mit-license.org
 <body>
 
 <script id="jsbin-javascript">
-//var a = +prompt("Введите размер массива");
 var matrixArr;
 var p = +prompt("Введите столбец массива");
 var k = +prompt("Введите строку массива");
-
 function fillMatrixArr(rows, columns) {
   var arr = [];
   for (var i = 0; i < columns; i++) {
@@ -36,36 +34,24 @@ function fillMatrixArr(rows, columns) {
   }
   return arr;
 }
-
 matrixArr = fillMatrixArr(10, 10);
-
 function crossMatrixArr(arr, p, k) {
-  var tempArr = [];
-  var keySum = 0;
+  var keySum = 1;
+  var count = 0;
   for (var i = 1; i < arr.length-1; i++) {
     for (var j = 1; j < arr[i].length-1; j++) {
-      if ((i != p || j != k) && arr[i][j] != 0) {
-        tempArr[i] = arr[i][j];
+      if (i == p || j == k) {
+        arr[i][j] = "*";
+      } else if ((i != p || j != k) && arr[i][j] != 0) {
+        keySum *= arr[i][j];
+        count++;
       }
     }
   }
-  for (var l; l < tempArr.length; l++) {
-    keySum += l;
-  }
-  console.log(keySum)
-  for (var m = 1; m < arr.length-1; m++) {
-    for (var n = 1; n < arr[m].length-1; n++) {
-      if (m == p && j == k) {
-        arr[m][n] = keySum;
-      } else if (m == p || n == k) {
-        arr[m][n] = "*";
-      } 
-    }
-  }
+  arr[p][k] = Math.floor(Math.pow(keySum, 1/count));
 }
 crossMatrixArr(matrixArr, p, k)
 console.log(matrixArr);
-document.write(matrixArr);
 </script>
 </body>
 </html>
