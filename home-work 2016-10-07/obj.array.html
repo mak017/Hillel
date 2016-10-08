@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/fevomecoxe/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+body {
+  font-family: monospace;
+}
+div {
+  display: inline-block;
+  width: 20px;
+  text-align:center;
+  margin: 5px;
+}
+</style>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+obj = {
+  create1dArr: function() {
+    arr1d = [];
+    return arr1d;
+  },
+  create2dArr: function() {
+    arr2d = new Array(new Array());
+    return arr2d;
+  },
+  fill1dArr: function(length, n) {
+    for (var i = 0; i < length; i++) {
+      arr1d[i] = Math.floor(Math.random() * n);
+    }
+    return arr1d;
+  },
+  fill2dArr: function(columns, rows, n) {
+    for (var i = 0; i < columns; i++) {
+      arr2d[i] = [];
+      for (var j = 0; j < rows; j++) {
+       arr2d[i][j] = Math.floor(Math.random() * n);
+      }
+    }
+    return arr2d;
+  },
+  return1dArr: function() {
+    for (var i = 0; i < arr1d.length; i++) {
+      document.write(arr1d[i]+"&nbsp;&nbsp;")
+    }
+    document.write("<br><br><br>")
+  },
+  return2dArr: function() {
+    for (var i = 0; i < arr2d.length; i++) {
+      for (var j = 0; j < arr2d[i].length; j++) {
+        document.write("<div>"+arr2d[i][j]+"</div>")
+      }
+      document.write("<br>")
+    }
+    document.write("<br><br><br>")
+  }
+}
+obj.create1dArr();
+obj.create2dArr();
+obj.fill1dArr(10, 100);
+obj.fill2dArr(10, 10, 100);
+obj.return1dArr();
+obj.return2dArr();
+</script>
+</body>
+</html>
