@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>move</title>
+		<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+		<style>
+			html, body {
+				height: 100%;
+			}
+			.triangle {
+				position: fixed;
+				top: 200px;
+				left: 100px;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 100px 100px 100px;
+				border-color: transparent transparent #007bff transparent;
+			}
+		</style>
+		<script>
+			$(document).ready(function() {
+			$("body").on("mousemove", function(e) {
+				
+				var pos = $(".triangle").offset();
+				var x = e.pageX;
+				var y = e.pageY;
+				var posx = pos.left;
+				var posy = pos.top;
+				var cssleft = parseInt($(".triangle").css("left"));
+				var csstop = parseInt($(".triangle").css("top"));
+				
+				/*right down*/
+				if ((x >= posx-5 && x <= posx+20 && y >= posy+80 && y <= posy+100) ||
+				(x >= posx+20 && x <= posx+40 && y >= posy+60 && y <= posy+80) ||
+				(x >= posx+40 && x <= posx+60 && y >= posy+40 && y <= posy+60) ||
+				(x >= posx+60 && x <= posx+80 && y >= posy+20 && y <= posy+40) ||
+				(x >= posx+80 && x <= posx+95 && y >= posy+5 && y <= posy+20)) {
+					$(".triangle").css("left", cssleft+4+"px");
+					$(".triangle").css("top", csstop+4+"px");
+				}
+				/*left down*/
+				else if ((x >= posx+105 && x <= posx+120 && y >= posy+5 && y <= posy+20) ||
+				(x >= posx+120 && x <= posx+140 && y >= posy+20 && y <= posy+40) ||
+				(x >= posx+140 && x <= posx+160 && y >= posy+40 && y <= posy+60) ||
+				(x >= posx+160 && x <= posx+180 && y >= posy+60 && y <= posy+80) ||
+				(x >= posx+180 && x <= posx+205 && y >= posy+80 && y <= posy+100)) {
+					$(".triangle").css("left", cssleft-4+"px");
+					$(".triangle").css("top", csstop+4+"px");
+				}
+				/*up*/
+				else if (y >= posy+100 && y <= posy+105 && x >= posx && x <= posx+200) {
+					$(".triangle").css("top", csstop-4+"px")
+				} 
+				/*down*/
+				else if (x >= posx+95 && x <= posx+105 && y >= posy-5 && y <= posy+5) {
+					$(".triangle").css("top", csstop+4+"px")
+				}
+			})
+			})
+
+		</script>
+	</head>
+	<body>
+		  <p id="par"></p>
+  <div class="triangle"></div>
+	</body>
+</html>
